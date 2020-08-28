@@ -1,0 +1,55 @@
+.brand-list{
+    background-color: $main-color;
+    display: flex;
+    padding: 14px 0;
+    margin-bottom: 80px;
+    a{
+        color: white;
+        font-size: 20px;
+        line-height: 30px;
+        margin-right: 28px;
+    }
+    a:hover{
+        text-decoration: none;
+        color: black;
+    }
+}
+
+.add-Cart{
+    a{
+        margin-right: 10px;
+    }
+    img{
+        height: 16px;
+    }
+}
+
+
+.recent{
+    color: $sub-brown-color;
+    text-decoration: underline;
+}
+
+.modal-text{
+    display: block;
+    color: $main-color;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+}
+
+.page-link {
+    border: none;
+}
+
+.add-favorite{
+    margin-top: 10px;
+    a:hover{
+        text-decoration: none;
+    }
+    h6{
+        padding-left: 5px;
+        color: black;
+        line-height: 19px;
+    }
+}

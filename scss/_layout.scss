@@ -1,0 +1,137 @@
+@mixin text-replace-img($img_path){
+    background-image: url($img_path);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+@mixin pad(){
+    @media(max-width: 720px){
+        @content;
+    }
+}
+
+img{
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+
+ol, ul {
+	list-style: none;
+}
+
+.header a{
+    width: 128px;
+    @include text-replace-img("../img/d’Perfume.png");
+}
+
+.header-menu{
+    display : flex;
+    justify-content: flex-end;
+    li {
+        margin-left: 32px;
+        display: flex;
+        a{
+            margin-left: 4px;
+            line-height: 20px;
+            color : $gray-color;
+        }
+        a:hover{
+            text-decoration: none;
+            color: $light-gray;
+        }
+        img{
+            height: 20px;
+        }
+    }
+}
+
+.shoppingCart{
+    height: 100%;
+    margin: 10px 40px auto auto;
+    margin-right: 20px;
+    position: relative;
+}
+
+.shoppingCart::after{
+    content: '3';
+    position: absolute;
+    top: -13px;
+    right: -11px;
+    color: white;
+    font-size: 12px;
+    background-color: $main-color;
+    border-radius: 7px;
+    padding: 0 5px;
+}
+
+.cellphone-menu{
+    width: 100%;
+    text-align: center;
+    li a{
+        display: block;
+        background-color: #707070;
+        color: white;
+        font-size: 20px;
+        line-height: 30px;
+        text-decoration: none;
+        padding: 16px 0;
+        border: 1px solid white;
+    }
+    li a:hover{
+        background-color: $gray-color;
+    }
+}
+
+.subscribe {
+    background-image: url("../img/mail.png");
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    &-text{
+        color: $gray-color;
+        font-weight: bold;
+        input{
+            border: 2px solid $main-color;
+            padding: 20px 16px;
+        }
+    }
+}
+
+.footer{
+    background-color: $main-color;
+    height: auto;
+    color: white;
+    padding: 20px 0;
+    img{
+        height: 40px;
+        width: auto;
+    }
+    p{
+        margin: 13px 0px auto 10px;
+        font-size: 14px;
+        line-height: 21px;
+    }
+    ul li{
+        margin: 0 18px;
+    }
+    ul li a{
+        color: white;
+        text-decoration: none;
+    }
+    ul li a:hover{
+        color: black;
+    }
+}
+
+.discount{
+    text-decoration: line-through;
+    color: $gray-color;
+    margin-left: 8px;
+}
